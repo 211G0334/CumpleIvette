@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños Ivette! 🎉</title>
+    <style>
+        /* --- ESTILOS GENERALES Y PÚRPURA --- */
+        :root {
+            --color-principal: #6a0572; /* Púrpura profundo */
+            --color-secundario: #a020f0; /* Púrpura medio */
+            --color-fondo: #f3e5f5; /* Lavanda muy claro */
+            --color-texto: #333333;
+            --color-acento: #ff69b4; /* Rosa para acentuar */
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow-x: hidden; /* Previene scroll horizontal por las serpentinas */
+        }
+
+        /* Contenedores de las vistas */
+        .vista {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- VISTA INICIAL (BOTÓN) --- */
+        #vista-inicial {
+            display: flex; /* Mostrar por defecto */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Ocupa toda la altura de la ventana */
+        }
+
+        #btn-presioname {
+            background-color: var(--color-principal);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            box-shadow: 0 5px 15px rgba(106, 5, 114, 0.4);
+        }
+
+            #btn-presioname:hover {
+                background-color: var(--color-secundario);
+                transform: translateY(-2px);
+            }
+
+            #btn-presioname:active {
+                transform: translateY(0);
+                box-shadow: 0 2px 10px rgba(106, 5, 114, 0.4);
+            }
+
+        #texto-pequenito {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: var(--color-secundario);
+            font-style: italic;
+        }
+
+        /* --- VISTA DE CUMPLEAÑOS (SECRETA) --- */
+        #vista-cumpleanos {
+            display: none; /* Ocultar por defecto */
+            z-index: 10; /* Asegura que el contenido esté sobre las serpentinas */
+        }
+
+        #titulo-cumpleanos {
+            color: var(--color-principal);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #contenedor-imagen {
+            padding: 10px;
+            background: linear-gradient(45deg, var(--color-acento), var(--color-secundario));
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        #imagen-ivette {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            border: 5px solid white;
+        }
+
+        #carta-amiga {
+            text-align: left;
+            padding: 15px;
+            background-color: var(--color-fondo);
+            border-radius: 10px;
+            border-left: 5px solid var(--color-principal);
+            line-height: 1.6;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* --- EFECTO SERPENTINA (CSS) --- */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            opacity: 0;
+            animation: fall 3s ease-in forwards;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotateZ(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) rotateZ(720deg);
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="vista-inicial">
+        <button id="btn-presioname">PRESIONAME</button>
+        <p id="texto-pequenito">solo para Ivette Guardiola</p>
+    </div>
+
+    <div id="vista-cumpleanos" class="vista">
+        <h1 id="titulo-cumpleanos">¡FELIZ CUMPLEAÑOS PRECIOSA!</h1>
+
+        <div id="contenedor-imagen">
+            <img id="imagen-ivette" src="Ivette.png" alt="Ivette Guardiola">
+        </div>
+
+        <div id="carta-amiga">
+            Para la preciosa de preciosotas,
+            <br><br>
+            ¡Feliz, feliz, feliz cumpleaños! 🥳🎂🎉 No puedo creer que ya llevamos **más de tres años** de esta increíble amistad, llena de risas, apoyo incondicional y momentos inolvidables. Eres una de las personas más **auténticas** y **luminosas** que conozco. ✨
+            <br><br>
+            Gracias por ser mi consejera, mi compañera de locuras y la persona que siempre está ahí para escucharme sin juzgar. Eres de esas amigas que llegan para quedarse para siempre en el corazón. Eres única, inteligente y tienes un corazón gigante. ❤️
+            <br><br>
+            Espero que este día esté lleno de alegría, pastel, regalos 🎁 y todo el amor que mereces. Que se cumplan todos tus sueños este nuevo año de vida. ¡Te adoro muchísimo, amiga! Y por muchísimos años más de amistad. Un abrazo enorme. 🤗
+            <br><br>
+            Con todo mi cariño,
+            <br>
+            Pos yo Erika! nimodo k kien? 😉
+            <br>
+            pst. Perdon de vdd por olvidarlo :(
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('btn-presioname').addEventListener('click', function() {
+            // 1. Oculta la vista inicial
+            document.getElementById('vista-inicial').style.display = 'none';
+
+            // 2. Muestra la vista de cumpleaños
+            const vistaCumpleanos = document.getElementById('vista-cumpleanos');
+            vistaCumpleanos.style.display = 'block';
+
+            // 3. Lanza las serpentinas
+            lanzarSerpentinas();
+        });
+
+        function lanzarSerpentinas() {
+            const numSerpentinas = 100;
+            const colores = ['#ff69b4', '#a020f0', '#6a0572', '#ffd700', '#00ced1']; // Rosa, Púrpura, Oro, Turquesa
+
+            for (let i = 0; i < numSerpentinas; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+
+                // Posición inicial aleatoria
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colores[Math.floor(Math.random() * colores.length)];
+
+                // Tamaño aleatorio entre 5px y 12px
+                const size = Math.floor(Math.random() * 8) + 5;
+                confetti.style.width = size + 'px';
+                confetti.style.height = size + 'px';
+
+                // Retraso y duración de la animación aleatoria
+                confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                confetti.style.animationDuration = Math.random() * 2 + 3 + 's';
+
+                document.body.appendChild(confetti);
+
+                // Eliminar el elemento después de que termine la animación (para no sobrecargar la memoria)
+                confetti.addEventListener('animationend', () => {
+                    confetti.remove();
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
